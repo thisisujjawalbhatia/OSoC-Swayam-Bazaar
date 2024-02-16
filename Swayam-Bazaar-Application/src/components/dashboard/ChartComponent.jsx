@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { PieChart, Pie, Rectangle, Cell, ResponsiveContainer,BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { PieChart, Pie, Rectangle, Cell,BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const data = [
   { name: 'Item A', valueA: 500 ,valueB: 200 },
@@ -19,13 +19,16 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
     </text>
   );
 };
+
+
 export default class Example extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/pie-chart-with-padding-angle-7ux0o';
 
   render() {
     return (
+      <body>
       <div className='SALES'>
-        <div className='TotalSales'>
+        <div className='Charts pie'>
       <PieChart 
       width={500} height={300} onMouseEnter={this.onPieEnter}
       >
@@ -52,9 +55,8 @@ export default class Example extends PureComponent {
           <Tooltip />
       </PieChart>
          <h2>Total Sales</h2>
-            
         </div>
-      <div className='SalesInEachSector'>
+      <div className='Charts bar'>
        <BarChart
           width={500}
           height={300}
@@ -73,10 +75,11 @@ export default class Example extends PureComponent {
           <Legend />
           <Bar dataKey="valueA" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
           <Bar dataKey="valueB" fill="#82ca9d" activeBar={<Rectangle fill="gold" stroke="purple" />} />
-        </BarChart>
-        <h2> Sales Comparision</h2>
-      </div>
+          </BarChart>
+          <h2> Sales Comparision</h2>
+          </div>
     </div>
+    </body>
     );
   }
 }

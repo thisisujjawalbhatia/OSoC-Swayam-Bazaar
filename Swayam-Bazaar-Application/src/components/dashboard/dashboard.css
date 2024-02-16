@@ -107,38 +107,34 @@
     padding-left: 20px;
     border-bottom: #fff 0.5px solid;
   }
-.chart-container{
-  position: relative;
-  top: 50px;
-  padding: 10px;  
-}
-.SALES{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-text-align: center;
-width: "50%";
+/* charts */
 
+.SALES{
+  flex: 1;
+  width: 100%;
 }
-.TotalSales{
-  position: relative;
-  top: 50px;
-  left :40px; 
-  padding: 0px;
-  margin: 0px;
-  justify-content: center;
-  
+.Charts {
+  float: left;
+
 }
 h2{
-  position: relative;
-  /* right: 50%; */
-  top: 0px;
-  color: black
+  color: black;
+  text-align: center;
+}
+.pie{
+float: left;
+}
+.bar{
+  float: right;
 
 }
-.SalesInEachSector{
-  position : relative;
-  left: 75%;
-  top: 50px;
-
-
+@media (max-width: 1050){
+  .Charts{
+    margin-bottom: 500px;
+    display: inline;
+  }
+  .bar{
+    margin-top:50px ;
+    height: 150px;
+  }
 }
