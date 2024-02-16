@@ -135,13 +135,13 @@ float: left;
     margin-bottom: 500px;
     display: inline;
   }
-  BarChart{
+  .bar{
     margin-top:50px ;
     height: 150px;
   }
 }
 @media (min-width: 1050){
-  BarChart{
+  .bar{
     margin-top:50px ;
     height: 500px;
   }
